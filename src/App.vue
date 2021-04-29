@@ -1,17 +1,22 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Dyode msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Dyode from './components/Dyode.vue'
+import Vue from 'vue';
+import { Row, Column } from 'vue-grid-responsive';
+
+Vue.component('row', Row);
+Vue.component('column', Column);
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Dyode
   }
 }
 </script>

@@ -1,6 +1,16 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+     <row :gutter="12">
+        <column :xs="12" :md="4" :lg="3">xs=12 md=4 lg=3</column>
+        <column :xs="12" :md="4" :lg="3">xs=12 md=4 lg=3</column>
+        <column :xs="12" :md="4" :lg="3">xs=12 md=4 lg=3</column>
+        <column :xs="12" :md="4" :lg="3">xs=12 md=4 lg=3</column>
+        <column :xs="12" :lg="6">xs=12 lg=6</column>
+        <column :xs="12" :lg="6">xs=12 lg=6</column>
+        <column :lg="4">lg=4</column>
+        <column :lg="4"><h1>{{ msg }}</h1></column>
+        <column :lg="4">lg=4</column>
+      </row>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
