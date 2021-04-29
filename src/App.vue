@@ -1,22 +1,34 @@
 <template>
   <div id="app">
+    <header>
+      Header
+    </header>
     <img alt="Vue logo" src="./assets/logo.png">
-    <Dyode msg="Welcome to Your Vue.js App"/>
+    <FullCarousel />
+    <Categories />
+    <NewArrivals />
+    <FullCTA />
   </div>
 </template>
 
 <script>
-import Dyode from './components/Dyode.vue'
+import FullCarousel from './components/FullCarousel.vue'
+import Categories from './components/Categories.vue'
+import NewArrivals from './components/NewArrivals.vue'
+import FullCTA from './components/FullCTA.vue'
 import Vue from 'vue';
-import { Row, Column } from 'vue-grid-responsive';
 
+import { Row, Column } from 'vue-grid-responsive';
 Vue.component('row', Row);
 Vue.component('column', Column);
 
 export default {
   name: 'App',
   components: {
-    Dyode
+    FullCarousel,
+    Categories,
+    NewArrivals,
+    FullCTA
   }
 }
 </script>
