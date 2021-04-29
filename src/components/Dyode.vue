@@ -1,5 +1,13 @@
 <template>
   <div class="hello">
+  <swiper ref="mySwiper" :options="swiperOptions">
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 4</swiper-slide>
+    <swiper-slide>Slide 5</swiper-slide>
+    <div class="swiper-pagination" slot="pagination"></div>
+  </swiper>
      <row :gutter="12">
         <column :xs="12" :md="4" :lg="3">xs=12 md=4 lg=3</column>
         <column :xs="12" :md="4" :lg="3">xs=12 md=4 lg=3</column>
