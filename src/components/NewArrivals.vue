@@ -1,9 +1,9 @@
 <template>
-<div class="new-arrivals">
+<div class="new-arrivals container">
 <section>
-    <row :gutter="12">
+    <row container :gutter="12">
      <column :xs="12">
-     <h2>New Arrivals</h2>
+     <h2 class="header-title section-title">New Arrivals</h2>
       <swiper class="swiper" :options="swiperOption">
     <swiper-slide><img src="../assets/images/compressed/Product-Carousel-Image.jpeg"></swiper-slide>
     <swiper-slide><img src="../assets/images/compressed/Product-Carousel-Image.jpeg"></swiper-slide>
@@ -15,7 +15,8 @@
     <swiper-slide><img src="../assets/images/compressed/Product-Carousel-Image.jpeg"></swiper-slide>
     <swiper-slide><img src="../assets/images/compressed/Product-Carousel-Image.jpeg"></swiper-slide>
     <swiper-slide><img src="../assets/images/compressed/Product-Carousel-Image.jpeg"></swiper-slide>
-    <div class="swiper-pagination" slot="pagination"></div>
+    <div class="swiper-button-prev" slot="button-prev"></div>
+    <div class="swiper-button-next" slot="button-next"></div>
   </swiper>
       </column>
     </row>
@@ -41,20 +42,28 @@ Swiper.use([Navigation, Pagination]);
     data() {
       return {
         swiperOption: {
-          slidesPerView: 5,
-          spaceBetween: 50,
+          slidesPerView: 4,
+          spaceBetween: 0,
           pagination: {
             el: '.swiper-pagination',
             clickable: true
           },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          },
           breakpoints: {
-            768: {
+            992: {
               slidesPerView: 4,
-              spaceBetween: 30
+              spaceBetween: 0
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 0
             },
             640: {
               slidesPerView: 3,
-              spaceBetween: 20
+              spaceBetween: 40
             },
             320: {
               slidesPerView: 2,
@@ -69,4 +78,7 @@ Swiper.use([Navigation, Pagination]);
 </script>
 <style lang="scss" scoped>
 @import '/node_modules/swiper/swiper.scss';
+.swiper-slide img {
+    max-height: 370px;
+}
 </style>
