@@ -1,4 +1,4 @@
-<template>
+git<template>
 <div class="full-hero-mobile">
 <section class="block-section-mobile">
     <row :gutter="12">
@@ -21,7 +21,7 @@
     background: #EFEFEF;
 }
 .block-section-mobile {
-    .header-title, {
+    .header-title {
         &.section-title{
             color: $main-color;
             margin-bottom: 0;

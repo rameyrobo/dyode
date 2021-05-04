@@ -5,7 +5,4 @@ Header
 </template>
 <style lang="scss" scoped>
 @import '../assets/styles/element-variables.scss';
-header {
-
-}
 </style>
