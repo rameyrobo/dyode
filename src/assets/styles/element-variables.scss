@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+/* Font Variables
+-----------------------*/
+
+$primary-font-family: 'Pacifico',sans-serif;
+$secondary-font-family: 'Lato', serif;
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+
+/* Layout Breakpoints
+-----------------------*/
+
+$layout-breakpoint-small: 576px;
+$layout-breakpoint-medium: 768px;
+$layout-breakpoint-large: 992px;
+$layout-breakpoint-xtra-large: 1200px;
+
+/* Container 
+-----------------------*/
+
+.container {
+    margin: auto !important;
+    max-width: 1350px;
+}
+
+/* Hidden Variables 
+-----------------------*/
+@media (max-width: $layout-breakpoint-large) {
+    .hiddenVGR-lg {
+      display: none;
+    }
+  }
+
+/* Theme colors
+-----------------------*/
+$main-color: #10504F !default;
+/// color|1|Background Color|4
+$color-white: #FFFFFF !default;
+/// color|1|Background Color|4
+$color-black: #000000 !default;
+
+/* Theme Titles 
+-----------------------*/
+.header-title {
+    font-family: $primary-font-family;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    &.section-title {
+        color: $color-black;
+    }
+}
+.secondary-text {
+    font-family: $secondary-font-family;
+}
+
+/* Buttons
+-----------------------*/
+
+button.black {
+    background-color: $color-black;
+    color: $color-white;
+
+
+}
