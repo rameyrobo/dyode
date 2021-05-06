@@ -20,7 +20,7 @@
 }
 .full-hero {
   background-image: url('../assets/images/compressed/CTA-Banner.jpeg');
-  min-height:227px;
+  min-height: 46vw;
   background-position: center;
   background-size: cover;
   display: flex;
