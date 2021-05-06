@@ -58,13 +58,16 @@ $color-black: #000000 !default;
     color: $color-black !important;
 }
 .main-color-bg { 
-    color: $main-color !important;
+    background-color: $main-color !important;
 }
 .white-bg { 
     background-color: $color-white !important;
 }
 .black-bg { 
     background-color: $color-black !important;
+}
+.transparent-bg {
+    background-color: transparent !important;
 }
 
 /* Theme Titles 
@@ -92,9 +95,8 @@ h2 {
 /* Buttons
 -----------------------*/
 
-.shop-now {
+button, .button {
     font-family: $secondary-font-family;
-    background-color: $color-black;
     color: $color-white;
     text-transform: uppercase;
     @include font-size(1rem);
