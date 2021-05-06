@@ -8,6 +8,7 @@
     <FullHero />
     <FullHeroMobile />
     <Instagram />
+    <Newsletter />
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import NewArrivals from './components/NewArrivals.vue'
 import FullHero from './components/FullHero.vue'
 import FullHeroMobile from './components/FullHeroMobile.vue'
 import Instagram from './components/Instagram.vue'
+import Newsletter from './components/Newsletter.vue'
 import Vue from 'vue';
 
 import {
@@ -50,7 +52,8 @@ export default {
     NewArrivals,
     FullHero,
     FullHeroMobile,
-    Instagram
+    Instagram,
+    Newsletter
   }
 }
 </script>
