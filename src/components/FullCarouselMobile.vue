@@ -5,7 +5,7 @@
      <column :xs="12">
      <h2 class="header-title section-title">Shop New Arrivals</h2>
      <h4 class="subheader secondary-text">Our coolest new items are waiting for you!</h4>
-     <button class="shop-now">Shop Now</button>
+     <button class="shop-now black-bg white">Shop Now</button>
      </column>
     </row>
 </section>

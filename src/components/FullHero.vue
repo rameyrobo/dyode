@@ -8,7 +8,7 @@
      <h2 class="section-title section-title white">Our Favorite Tees</h2>
      </div>
      <div class="subtitle white">Everyday tees you need!</div>
-     <div class="text"><button class="shop-now">Shop Now</button></div>
+     <div class="text"><button class="shop-now main-color-bg white">Shop Now</button></div>
      </div>
      </column>
     </row>
@@ -35,7 +35,6 @@
   color: white;
   box-sizing: border-box;
   padding: 0 80px;
-  background-color: transparent;
   overflow-x: hidden;
 }
 @media screen and (min-width: $layout-breakpoint-medium) {

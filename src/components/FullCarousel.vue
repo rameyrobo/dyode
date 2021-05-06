@@ -7,21 +7,21 @@
             <h2 class="section-title main-color">Shop New Arrivals</h2>
           </div>
           <div class="subtitle main-color">Our coolest new items are waiting for you</div>
-          <div class="text"><button class="shop-now">Shop Now</button></div>
+          <div class="text"><button class="shop-now black-bg white">Shop Now</button></div>
         </swiper-slide>
         <swiper-slide class="slide-2">
           <div class="title header-title">
             <h2 class="section-title color-white">Shop New Arrivals</h2>
           </div>
           <div class="subtitle color-white">Our coolest new items are waiting for you</div>
-          <div class="text"><button class="shop-now">Shop Now</button></div>
+          <div class="text"><button class="shop-now black-bg white">Shop Now</button></div>
         </swiper-slide>
         <swiper-slide class="slide-3">
           <div class="title header-title">
             <h2 class="section-title color-white">Shop New Arrivals</h2>
           </div>
           <div class="subtitle color-white">Our coolest new items are waiting for you</div>
-          <div class="text"><button class="shop-now">Shop Now</button></div>
+          <div class="text"><button class="shop-now black-bg white">Shop Now</button></div>
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>

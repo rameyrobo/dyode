@@ -103,12 +103,16 @@ export default {
   font-weight: normal;
   line-height: 0;
   text-align: center;
+  color: $main-color;
 }
 .product-price span:before {
   content: '$';
   @include font-size(2.25rem);
   position: relative;
   top:-2px;
+}
+.swiper-button-prev:after, .swiper-button-next:after {
+  @include font-size(1.25rem)
 }
 @media (min-width: 768px) {
 .product-title {
