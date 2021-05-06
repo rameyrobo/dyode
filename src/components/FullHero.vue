@@ -3,9 +3,13 @@
 <section class="block-section-desktop">
     <row :gutter="12">
      <column :xs="12">
-     <h2 class="header-title section-title">Our Favorite Tees</h2>
-     <h4 class="secondary-text">Everyday tees you need!</h4>
-     <button>Shop Now</button>
+     <div class="right-aligned-content">
+     <div class="title header-title">
+     <h2 class="section-title section-title white">Our Favorite Tees</h2>
+     </div>
+     <div class="subtitle white">Everyday tees you need!</div>
+     <div class="text"><button class="shop-now">Shop Now</button></div>
+     </div>
      </column>
     </row>
 </section>
@@ -13,11 +17,13 @@
 </template>
 <style lang="scss" scoped>
 @import '../assets/styles/element-variables.scss';
-@media screen and (max-width: 767px) {
 .block-section-desktop {
+    display: block;
+  }
+.right-aligned-content {
     display: none;
   }
-}
+
 .full-hero {
   background-image: url('../assets/images/compressed/CTA-Banner.jpeg');
   min-height: 46vw;
@@ -30,5 +36,40 @@
   box-sizing: border-box;
   padding: 0 80px;
   background-color: transparent;
+  overflow-x: hidden;
+}
+@media screen and (min-width: $layout-breakpoint-medium) {
+.right-aligned-content {
+  display: block;
+  top: -9vw;
+  position: relative;
+  float: right;
+}
+ .title, .subtitle, .text {
+    text-align:left;
+  }
+  .title {
+  margin-bottom: 20px;
+  @include font-size(1.75rem);
+  font-weight: bold;
+  margin-bottom: 0;
+  line-height: 1rem;
+  }
+.subtitle {
+  margin-bottom: 20px;
+  @include font-size(1.185rem);
+  }
+.text {
+    max-width: 430px;
+    line-height: 1.32;
+  }
+}
+@media screen and (min-width: $layout-breakpoint-large) {
+  .title {
+  @include font-size(2.5rem);
+  }
+.subtitle {
+  @include font-size(1.685rem);
+  }
 }
 </style>
