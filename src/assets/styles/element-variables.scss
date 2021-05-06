@@ -1,26 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 @import "~rfs/scss";
-html {
-    overflow-x: hidden;
-}
-body {
-    margin-left: 0;
-    margin-right: 0;
-}
-.container {
-    max-width: 100% !important;
-}
-
-/* Font Variables
------------------------*/
-
-$primary-font-family: 'Pacifico',sans-serif;
-$secondary-font-family: 'Lato', serif;
-
-/* icon font path, required */
-$--font-path: '~element-ui/lib/theme-chalk/fonts';
-
 
 /* Layout Breakpoints
 -----------------------*/
@@ -30,23 +10,35 @@ $layout-breakpoint-medium: 768px;
 $layout-breakpoint-large: 992px;
 $layout-breakpoint-xtra-large: 1200px;
 
-/* Container 
+/* Containers 
 -----------------------*/
-
+html {
+    overflow-x: hidden;
+}
+body {
+    margin-left: 0;
+    margin-right: 0;
+}
 .container {
+    max-width: 100% !important;
     margin: auto !important;
 }
 .secondary.container {
     padding: 0 .6275rem;
 }
-
-/* Hidden Variables 
------------------------*/
-@media (max-width: $layout-breakpoint-large) {
-    .hiddenVGR-lg {
-      display: none;
+@media screen and (min-width:$layout-breakpoint-large) {
+    .secondary.container{
+        padding: 0 1.25rem;
     }
-  }
+}
+/* Font Variables
+-----------------------*/
+
+$primary-font-family: 'Pacifico',sans-serif;
+$secondary-font-family: 'Lato', serif;
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
 
 /* Theme colors
 -----------------------*/
@@ -89,6 +81,9 @@ $color-black: #000000 !default;
     &.section-title {
         color: $color-black;
     }
+}
+h2 {
+    font-weight: normal;
 }
 .secondary-text {
     font-family: $secondary-font-family;
