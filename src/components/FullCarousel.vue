@@ -45,11 +45,11 @@ Swiper.use([Navigation, Pagination]);
         swiperOption: {
           slidesPerView: 1,
           spaceBetween: 0,
-          loop: true,
+          loop: false,
           padding: 0,
           pagination: {
             el: '.swiper-pagination',
-            clickable: true
+            clickable: false
           }
         }
       }
@@ -59,69 +59,55 @@ Swiper.use([Navigation, Pagination]);
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/styles/element-variables.scss';
 @import '/node_modules/swiper/swiper.scss';
 @import '/node_modules/swiper/components/pagination/pagination.scss';
 
+
 // Swiper Carousel Styles
-  .swiper {
-    height: 800px;
-
-    .swiper-slide {
-      background-position: center;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: white;
-      box-sizing: border-box;
-      padding: 0 80px;
-      background-color: transparent;
-
-      &.slide-1 {
-        background-image:url('../assets/images/compressed/Hero-Image-11.jpeg')
-      }
-      &.slide-2 {
-        background-image:url('../assets/images/compressed/Hero-Image-12.jpeg')
-      }
-      &.slide-3 {
-        background-image:url('../assets/images/compressed/Hero-Image-13.jpeg')
-      }
-    .title {
-      margin-bottom: 20px;
-      font-size: 4rem;
-      font-weight: bold;
-      }
-
-    .subtitle {
-      margin-bottom: 20px;
-      font-size: 2rem;
-      }
-
-    .text {
-        max-width: 430px;
-        line-height: 1.32;
-      }
-    }
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  box-sizing: border-box;
+  padding: 0 80px;
+  background-color: transparent;
+  min-height: 46vw;  &.slide-1 {
+    background-image:url('../assets/images/compressed/Hero-Image-11.jpeg')
   }
+  &.slide-2 {
+    background-image:url('../assets/images/compressed/Hero-Image-12.jpeg')
+  }
+  &.slide-3 {
+    background-image:url('../assets/images/compressed/Hero-Image-13.jpeg')
+  }
+  .title, .subtitle, .text {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: $layout-breakpoint-medium) {  
+.swiper-slide {
+  .title, .subtitle, .text {
+    visibility: visible;
+  }
+}    
+.title {
+  margin-bottom: 20px;
+  font-size: 4rem;
+  font-weight: bold;
+  }
+.subtitle {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  }
+.text {
+    max-width: 430px;
+    line-height: 1.32;
+  }
+}
 // End Swiper Carousel Styles
-
-
-</style>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>
