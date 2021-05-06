@@ -26,16 +26,11 @@
 
 <script scoped>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-import 'swiper/css/swiper.css'
-// core version + navigation, pagination modules:
-import { Navigation, Pagination } from 'swiper'
-import 'swiper/swiper.scss'
-// configure Swiper to use modules
-Swiper.use([Navigation, Pagination]);
+  import 'swiper/css/swiper.css'
 
   export default {
-    name: 'swiper-example-loop',
-    title: 'Loop mode / Infinite loop',
+    name: 'swiper-example-pagination',
+    title: 'Pagination',
     components: {
       Swiper,
       SwiperSlide
@@ -43,20 +38,15 @@ Swiper.use([Navigation, Pagination]);
     data() {
       return {
         swiperOption: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          loop: false,
-          padding: 0,
           pagination: {
             el: '.swiper-pagination',
-            clickable: false
+            clickable: true
           }
         }
       }
     }
   }
-// End Carousel Script
-</script>
+  </script>
 
 <style lang="scss" scoped>
 @import '../assets/styles/element-variables.scss';

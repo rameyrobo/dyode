@@ -25,14 +25,10 @@
 </template>
 <script scoped>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-import 'swiper/css/swiper.css'
 // core version + navigation, pagination modules:
-import { Navigation, Pagination } from 'swiper'
 import 'swiper/swiper.scss'
 // configure Swiper to use modules
-Swiper.use([Navigation, Pagination]);
-
-  export default {
+export default {
     name: 'swiper-example-responsive-breakpoints',
     title: 'Responsive breakpoints',
     components: {
@@ -44,10 +40,6 @@ Swiper.use([Navigation, Pagination]);
         swiperOption: {
           slidesPerView: 4,
           spaceBetween: 0,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-          },
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
@@ -57,11 +49,7 @@ Swiper.use([Navigation, Pagination]);
               slidesPerView: 4,
               spaceBetween: 0
             },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 0
-            },
-            576: {
+            480: {
               slidesPerView: 3,
               spaceBetween: 0
             },
