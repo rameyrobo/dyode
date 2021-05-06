@@ -77,8 +77,12 @@ Swiper.use([Navigation, Pagination]);
 // End Carousel Script
 </script>
 <style lang="scss" scoped>
+@import '../assets/styles/element-variables.scss';
 @import '/node_modules/swiper/swiper.scss';
 .swiper-slide img {
     max-height: 370px;
+}
+.swiper-button-prev, .swiper-button-next {
+  color: $color-black;
 }
 </style>
