@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <FullCarousel />
+    <FullCarouselMobile />
     <Categories />
     <NewArrivals />
     <FullHero />
@@ -14,6 +15,7 @@
 <script>
 import Header from './components/Header.vue'
 import FullCarousel from './components/FullCarousel.vue'
+import FullCarouselMobile from './components/FullCarouselMobile.vue'
 import Categories from './components/Categories.vue'
 import NewArrivals from './components/NewArrivals.vue'
 import FullHero from './components/FullHero.vue'
@@ -47,6 +49,7 @@ export default {
   components: {
     Header,
     FullCarousel,
+    FullCarouselMobile,
     Categories,
     NewArrivals,
     FullHero,
