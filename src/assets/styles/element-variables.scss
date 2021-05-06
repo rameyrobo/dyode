@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import "~rfs/scss";
+
+body {
+    margin-left: 0;
+    margin-right: 0;
+}
 
 /* Font Variables
 -----------------------*/
@@ -46,11 +52,14 @@ $color-black: #000000 !default;
 /* Theme Titles 
 -----------------------*/
 .header-title {
+    @include font-size(4rem);
+}
+.header-title {
     font-family: $primary-font-family;
-    font-size: 3rem;
     font-style: normal;
     font-weight: normal;
     text-align: center;
+    line-height: 1.2;
     &.section-title {
         color: $color-black;
     }
@@ -67,4 +76,11 @@ button.black {
     color: $color-white;
 
 
+}
+
+/* Universal Section Rules
+------------------------*/
+
+.full-hero-mobile {
+    padding: 2.5rem 0;
 }

@@ -63,11 +63,13 @@
     background-image:url('../assets/images/compressed/Accessories-Image-3.jpeg')
   }
 }
+.card-title {
+  @include font-size(3rem);
+}
   .card-title {
     background:$main-color;
     font-family: 'Pacifico', cursive;
     color: $color-white;
-    font-size: 2.5rem;
     min-height:42px;
   }
 @media (min-width: $layout-breakpoint-medium) {
