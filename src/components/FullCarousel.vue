@@ -3,19 +3,25 @@
     <section>
       <swiper class="swiper" :options="swiperOption">
         <swiper-slide class="slide-1">
-          <div class="title">Shop New Arrivals</div>
-          <div class="subtitle">Our coolest new items are waiting for you</div>
-          <div class="text"><button>Shop Now</button></div>
+          <div class="title header-title">
+            <h2 class="section-title main-color">Shop New Arrivals</h2>
+          </div>
+          <div class="subtitle main-color">Our coolest new items are waiting for you</div>
+          <div class="text"><button class="shop-now">Shop Now</button></div>
         </swiper-slide>
         <swiper-slide class="slide-2">
-          <div class="title">Shop New Arrivals</div>
-          <div class="subtitle">Our coolest new items are waiting for you</div>
-          <div class="text"><button>Shop Now</button></div>
+          <div class="title header-title">
+            <h2 class="section-title color-white">Shop New Arrivals</h2>
+          </div>
+          <div class="subtitle color-white">Our coolest new items are waiting for you</div>
+          <div class="text"><button class="shop-now">Shop Now</button></div>
         </swiper-slide>
         <swiper-slide class="slide-3">
-          <div class="title">Shop New Arrivals</div>
-          <div class="subtitle">Our coolest new items are waiting for you</div>
-          <div class="text"><button>Shop Now</button></div>
+          <div class="title header-title">
+            <h2 class="section-title color-white">Shop New Arrivals</h2>
+          </div>
+          <div class="subtitle color-white">Our coolest new items are waiting for you</div>
+          <div class="text"><button class="shop-now">Shop Now</button></div>
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
@@ -53,7 +59,6 @@ import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 @import '/node_modules/swiper/swiper.scss';
 @import '/node_modules/swiper/components/pagination/pagination.scss';
 
-
 // Swiper Carousel Styles
 .swiper-slide {
   background-position: center;
@@ -65,7 +70,9 @@ import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
   box-sizing: border-box;
   padding: 0 80px;
   background-color: transparent;
-  min-height: 46vw;  &.slide-1 {
+  max-height: 46vw;  
+  
+  &.slide-1 {
     background-image:url('../assets/images/compressed/Hero-Image-11.jpeg')
   }
   &.slide-2 {
@@ -78,25 +85,52 @@ import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
     visibility: hidden;
   }
 }
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 6px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
 
 @media (min-width: $layout-breakpoint-medium) {  
 .swiper-slide {
+  min-height: 46vw;  
   .title, .subtitle, .text {
     visibility: visible;
+    text-align:left;
+    float: left;
   }
-}    
 .title {
   margin-bottom: 20px;
-  font-size: 4rem;
+  @include font-size(1.75rem);
   font-weight: bold;
+  margin-bottom: 0;
+  line-height: 1rem;
   }
 .subtitle {
   margin-bottom: 20px;
-  font-size: 2rem;
+  @include font-size(1.185rem);
   }
 .text {
     max-width: 430px;
     line-height: 1.32;
+  }
+}
+.swiper-pagination-bullet {
+    width: 28px !important;
+    height: 28px !important;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 10px;
+  }    
+}
+@media screen and (min-width: $layout-breakpoint-large) {
+  .title {
+  @include font-size(2.5rem !important);
+  }
+.subtitle {
+  @include font-size(1.685rem !important);
   }
 }
 // End Swiper Carousel Styles
