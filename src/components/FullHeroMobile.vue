@@ -1,4 +1,4 @@
-git<template>
+<template>
 <div class="full-hero-mobile">
 <section class="block-section-mobile">
     <row :gutter="12">
@@ -16,15 +16,15 @@ git<template>
 @import '../assets/styles/element-variables.scss';
 
 .full-hero-mobile {
-    display: none;
-    position: absolute;
+    display: block;
+    position: relative;
     background: #EFEFEF;
 }
 .block-section-mobile {
     .header-title {
         &.section-title{
             color: $main-color;
-            margin-bottom: 0;
+            margin: 0;
         }
     }
 }
@@ -32,10 +32,11 @@ h4.subheader {
     color: $main-color;
     margin-top:0;
 }
-@media screen and (max-width:$layout-breakpoint-medium) {
-    .full-hero-mobile {
-        display: block;
-        position: relative;
+@media screen and (min-width:$layout-breakpoint-medium) {
+.full-hero-mobile {
+    display: none;
     }
 }
+
+
 </style>
