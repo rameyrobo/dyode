@@ -36,6 +36,9 @@ $layout-breakpoint-xtra-large: 1200px;
 .container {
     margin: auto !important;
 }
+.secondary.container {
+    padding: 0 .6275rem;
+}
 
 /* Hidden Variables 
 -----------------------*/
@@ -52,6 +55,25 @@ $main-color: #10504F !default;
 $color-white: #FFFFFF !default;
 /// color|1|Background Color|4
 $color-black: #000000 !default;
+
+.main-color { 
+    color: $main-color !important;
+}
+.white { 
+    color: $color-white !important;
+}
+.black { 
+    color: $color-black !important;
+}
+.main-color-bg { 
+    color: $main-color !important;
+}
+.white-bg { 
+    background-color: $color-white !important;
+}
+.black-bg { 
+    background-color: $color-black !important;
+}
 
 /* Theme Titles 
 -----------------------*/
@@ -75,16 +97,15 @@ $color-black: #000000 !default;
 /* Buttons
 -----------------------*/
 
-button.black {
+.shop-now {
+    font-family: $secondary-font-family;
     background-color: $color-black;
     color: $color-white;
-
-
+    text-transform: uppercase;
+    @include font-size(1rem);
+    padding: .9rem 1.65rem;
+    border: none;
 }
 
 /* Universal Section Rules
 ------------------------*/
-
-.full-hero-mobile {
-    padding: 2.5rem 0;
-}
