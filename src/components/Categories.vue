@@ -3,7 +3,7 @@
     <section class="categories">
     <row :gutter="12">
         <column :xs="6" :lg="4">
-        <div class="card-top">
+        <div onclick="alert('Go to Women\'s category')" class="card-top">
           <div class="card card-1">
           </div>
           <div class="card-title">
@@ -12,7 +12,7 @@
           </div>
         </column>
         <column :xs="6" :lg="4">
-        <div class="card-top">
+        <div onclick="alert('Go to Men\'s category')" class="card-top">
           <div class="card card-2">
           </div>
           <div class="card-title">
@@ -21,7 +21,7 @@
           </div>
         </column>
         <column :xs="12" :lg="4">
-        <div class="card-bottom">
+        <div onclick="alert('Go to Accessories category')" class="card-bottom">
           <div class="card card-3">
           </div>
           <div class="card-title">
@@ -41,6 +41,9 @@
 
 // Card Styles
 
+.card-top, .card-bottom {
+  cursor: pointer;
+}
 .card {
   width: 100%;
   background-position: top;
