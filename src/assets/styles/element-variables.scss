@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 @import "~rfs/scss";
-
+html {
+    overflow-x: hidden;
+}
 body {
     margin-left: 0;
     margin-right: 0;
+}
+.container {
+    max-width: 100% !important;
 }
 
 /* Font Variables
@@ -52,7 +57,7 @@ $color-black: #000000 !default;
 /* Theme Titles 
 -----------------------*/
 .header-title {
-    @include font-size(4rem);
+    @include font-size(3.75rem);
 }
 .header-title {
     font-family: $primary-font-family;
