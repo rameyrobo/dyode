@@ -33,7 +33,7 @@
 }
 @media screen and (min-width: $layout-breakpoint-large) {
     .social-img {
-        max-width: 17.1vw;
+        max-width: 18.5vw;
     }
     .hiddenVGR-lg-mf {
         display: inline;
