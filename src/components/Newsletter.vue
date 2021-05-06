@@ -3,7 +3,7 @@
 <section class="block-section-mobile">
     <row :gutter="12">
      <column :xs="12">
-     <h2 class="header-title section-title">Sign Up and Stay Connected</h2>
+     <h2 class="header-title section-title"><img class="subscribe-ico" src="../assets/images/compressed/subscribe.svg">Sign Up and Stay Connected</h2>
      </column>
     </row>
     <row :gutter="12">
@@ -25,7 +25,6 @@
 @import '../assets/styles/element-variables.scss';
 
 .newsletter {
-    position: absolute;
     background: $main-color;
 }
 .block-section-mobile {
@@ -34,14 +33,14 @@
             margin-bottom: 0;
     }
 }
-h4.subheader {
-    color: $main-color;
-    margin-top:0;
-}
 @media screen and (max-width:$layout-breakpoint-medium) {
     .full-hero-mobile {
         display: block;
         position: relative;
     }
+}
+.newsletter-text {
+    font-size:1rem;
+    text-align: left;
 }
 </style>
