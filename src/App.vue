@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <Header />
-    <img alt="Vue logo" src="./assets/logo.png">
     <FullCarousel />
     <Categories />
     <NewArrivals />
