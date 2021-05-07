@@ -43,6 +43,7 @@
   top: -9vw;
   position: relative;
   float: right;
+  left: 30px;
 }
  .title, .subtitle, .text {
     text-align:left;
