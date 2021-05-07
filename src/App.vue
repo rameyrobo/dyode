@@ -10,6 +10,7 @@
     <Instagram />
     <Newsletter />
     <Footer />
+    <FooterDesktop />
   </div>
 </template>
 
@@ -24,6 +25,7 @@ import FullHeroMobile from './components/FullHeroMobile.vue'
 import Instagram from './components/Instagram.vue'
 import Newsletter from './components/Newsletter.vue'
 import Footer from './components/Footer.vue'
+import FooterDesktop from './components/FooterDesktop.vue'
 import Vue from 'vue';
 
 
@@ -47,7 +49,8 @@ export default {
     FullHeroMobile,
     Instagram,
     Newsletter,
-    Footer
+    Footer,
+    FooterDesktop
   }
 }
 </script>

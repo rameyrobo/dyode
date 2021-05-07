@@ -1,6 +1,6 @@
 <template>
-<div class="footer black-bg secondary container">
-  <row class="mobile-layout">
+<div class="footer black-bg mobile secondary container">
+  <row class="footer-mobile-layout">
     <column>
   <vsa-list init-active="true" :auto-collapse="false">
     <vsa-item>
@@ -46,7 +46,7 @@
 <a href="#"><img class="social-media-icons mid" src="../assets/images/compressed/ig.svg"></a>
 <a href="#"><img class="social-media-icons" src="../assets/images/compressed/twitter.svg"></a>
   </div>
-    </column>
+    </column >
     </row>
   </div>
 </template>
@@ -143,4 +143,9 @@ ul.menu-items {
 .mid {
   margin: 0 45px;
   }
+@media (min-width: $layout-breakpoint-medium) {
+.footer.black-bg.mobile.secondary.container {
+        display: none !important;
+}
+} 
 </style>
