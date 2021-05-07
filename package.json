@@ -8,12 +8,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "element-ui": "^2.15.1",
     "rfs": "^9.0.3",
     "swiper": "^5.4.5",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",
-    "vue-grid-responsive": "^0.2.2"
+    "vue-grid-responsive": "^0.2.2",
+    "vue-simple-accordion": "^0.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "~4.5.0",

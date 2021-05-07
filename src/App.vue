@@ -9,6 +9,7 @@
     <FullHeroMobile />
     <Instagram />
     <Newsletter />
+    <Footer />
   </div>
 </template>
 
@@ -22,25 +23,15 @@ import FullHero from './components/FullHero.vue'
 import FullHeroMobile from './components/FullHeroMobile.vue'
 import Instagram from './components/Instagram.vue'
 import Newsletter from './components/Newsletter.vue'
+import Footer from './components/Footer.vue'
 import Vue from 'vue';
 
-import {
-  Card,
-  Main,
-  Footer,
-  Image,
-  PageHeader,
-} from 'element-ui';
+
 import {
   Row,
   Column
 } from 'vue-grid-responsive';
 
-Vue.use(Card);
-Vue.use(Main);
-Vue.use(Footer);
-Vue.use(Image);
-Vue.use(PageHeader);
 Vue.component('row', Row);
 Vue.component('column', Column);
 
@@ -55,7 +46,8 @@ export default {
     FullHero,
     FullHeroMobile,
     Instagram,
-    Newsletter
+    Newsletter,
+    Footer
   }
 }
 </script>
