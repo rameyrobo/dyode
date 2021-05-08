@@ -28,7 +28,6 @@ import Footer from './components/Footer.vue'
 import FooterDesktop from './components/FooterDesktop.vue'
 import Vue from 'vue';
 
-
 import {
   Row,
   Column
@@ -36,6 +35,9 @@ import {
 
 Vue.component('row', Row);
 Vue.component('column', Column);
+
+import VueSimpleAccordion from 'vue-simple-accordion';
+Vue.use(VueSimpleAccordion);
 
 export default {
   name: 'App',
