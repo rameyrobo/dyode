@@ -105,3 +105,20 @@ button, .button {
 
 /* Universal Section Rules
 ------------------------*/
+.hiddenVGR-md-mf {
+    display: none !important;
+}
+
+.hiddenVGR-lg-mf {
+    display: none;
+}
+@media screen and (min-width:$layout-breakpoint-medium) {
+    .hiddenVGR-md-mf {
+        display: inline !important;
+    }
+}
+@media screen and (min-width:$layout-breakpoint-large) {
+    .hiddenVGR-lg-mf {
+        display: inline !important;
+    }
+}

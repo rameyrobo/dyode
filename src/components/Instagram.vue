@@ -35,8 +35,5 @@
     .social-img {
         max-width: 18.5vw;
     }
-    .hiddenVGR-lg-mf {
-        display: inline;
-    }
 }
 </style>
