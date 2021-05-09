@@ -74,14 +74,6 @@
             <v-list-item-title><a class="top drawer link black" href="#">Long Sleeve</a></v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
-            <v-list-item-title><a class="top drawer link black" href="#">Shorts</a></v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title><a class="top drawer link black" href="#">Pants</a></v-list-item-title>
-          </v-list-item>
-
         </v-list-item-group>
         </v-expansion-panel-content>
       </v-expansion-panel>
@@ -218,17 +210,47 @@ img.left.logo {
 aside.v-navigation-drawer.v-navigation-drawer--absolute {
   height: calc(100vh - 42px) !important;
   top: 42px !important;
-  width: 75% !important;
+  width: 82% !important;
     .v-list-item__title {
       text-align: left;
         .drawer {
           &.link {
+            @include font-size(1.125rem);
             text-decoration: none;
             font-weight: 500;
           }
         }
       } 
     }
+.v-overlay--active {
+  .v-overlay__scrim {
+    opacity: 0.7 !important;
+    background-color: #000 !important;
+    border-color: #000 !important;
+    }
+}
+.v-expansion-panel--active>.v-expansion-panel-header {
+    min-height: 35px;
+    max-height: 35px;
+}
+.v-list--dense .v-list-item, .v-list-item--dense {
+    min-height: 35px;
+}
+.v-expansion-panel-content__wrap {
+    padding: 0 24px 0px 16px;
+}
+/* Panel Menu */    
+.v-expansion-panel-header {
+  @include font-size(1rem);
+  font-weight: 300;
+}
+.v-expansion-panel:not(:first-child):after {
+  border-top: none;
+}
+.v-expansion-panel:before {
+  box-shadow: none;
+}
+/* Appended Bottom Menu */
 .v-navigation-drawer__append {
     background-color: #EFEFEF;
 }
