@@ -9,10 +9,10 @@
             </column>
         </row>
     </section>
-    <section class="main-navbar-section main-color-bg">
+     <section class="main-navbar-section main-color-bg">
         <row>
             <column :xs="5" :sm="5" :md="3" class="nav-menu-list logos">
-            <img class="left meat" src="../assets/images/compressed/meat.svg">
+             <v-app-bar-nav-icon @click.stop="drawer = !drawer"><img class="left meat" src="../assets/images/compressed/meat.svg"></v-app-bar-nav-icon>
             <img class="left logo" src="../assets/images/compressed/logo.svg">
             </column>
             <column :xs="2" :sm="2" :md="5" class="nav-menu-list menu-items white">
@@ -27,26 +27,125 @@
             <img class="menu-icon cart" src="../assets/images/compressed/cart-ico.svg">
             </column>
         </row>
+        <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      left
+      temporary
+    >
+      <v-list
+        nav
+        dense
+      >
+      <v-list-item>
+
+        <v-list-item-title></v-list-item-title>
+
+        <v-btn
+          icon
+          @click.stop="drawer = !drawer"
+        >
+             <img src="../assets/images/compressed/Hamburger.svg">
+        </v-btn>
+      </v-list-item>
+
+       <v-divider></v-divider>
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item>
+            <v-list-item-title>Foo</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Bar</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Fizz</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Buzz</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+        </v-list>
+         <template v-slot:append>
+        <div class="pa-2 grey-bg">
+              <v-row no-gutters class="mb-6">
+                  <v-col>
+            <img class="drawer-app-img" src="../assets/images/compressed/Social-1.jpeg">
+                  </v-col>
+                  <v-col>
+                    <v-list-item-group
+                        v-model="group"
+                        active-class="deep-purple--text text--accent-4"
+                    >
+                        <v-list-item>
+                            <v-list-item-title>Foo</v-list-item-title>
+                        </v-list-item>
+                        <v-list-item>
+                          <v-list-item-title>Bar</v-list-item-title>
+                        </v-list-item>
+
+                        <v-list-item>
+                          <v-list-item-title>Fizz</v-list-item-title>
+                        </v-list-item>
+
+                        <v-list-item>
+                          <v-list-item-title>Buzz</v-list-item-title>
+                        </v-list-item>
+                    </v-list-item-group>
+                  </v-col>
+              </v-row>
+        </div>
+      </template>
+    </v-navigation-drawer>
     </section>
+
   </div>
 </template>
+<script>
+  export default {
+    data: () => ({
+      drawer: false,
+      group: null,
+    }),
 
+    watch: {
+      group () {
+        this.drawer = false
+      },
+    },
+  }
+</script>
 <style lang="scss">
 @import '../assets/styles/element-variables.scss';
+
+/* Promo Bar Menu */
 .promo-bar-menu {
     text-align: center;
+    max-height: 46px;
+}
+
+/* Main Navbar Section */
+.main-navbar-section {
+    .container {
+        max-height:64px;
+    }
 }
 #nav {
-    min-height: 100px;
+    .main-navbar-section {
      .colVGR {
     display: flex !important;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     flex-direction: row;
-    height: 100px;
     vertical-align: middle;
     .menu-item {
         display:none;
+            } 
         }
     }
 }
@@ -54,7 +153,6 @@
     max-height: 50px;
 }
 .nav-menu-list {
-    margin-top: 25px;
     padding: 0;
 }
 #nav {
@@ -65,10 +163,34 @@
         }
     }
 }
+button.v-app-bar__nav-icon {
+    top: -15px;
+}
+img.left.logo {
+    width: 3.5rem;
+}
+.nav-menu-list.menu-icons {
+    top: 6px;
+}
 .menu-icon {
     max-width: 25px;
 }
+
+/* Nav Drawer styles */
+aside.v-navigation-drawer.v-navigation-drawer--absolute {
+    height: calc(100vh - 42px) !important;
+    top: 42px !important;
+    width: 75% !important;
+}
+.v-navigation-drawer__append {
+    background-color: #EFEFEF;
+}
+.drawer-app-img {
+    max-width: 100%;
+}
 @media screen and (min-width:$layout-breakpoint-medium) {
+
+/* Nav Menu tablet view up */
 #nav {
     .colVGR {
         .menu-item, .menu-icon {
@@ -80,7 +202,9 @@
 .nav-menu-list.menu-items {
     padding: 0rem 4rem;
     }
-.meat {
+
+/* Remove mobile assets */
+.meat, button.v-app-bar__nav-icon {
     display: none;
     }
 }
