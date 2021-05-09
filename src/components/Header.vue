@@ -233,7 +233,7 @@ aside.v-navigation-drawer.v-navigation-drawer--absolute {
     min-height: 35px;
     max-height: 35px;
 }
-.v-list--dense .v-list-item, .v-list-item--dense {
+.v-list--dense .v-list-item, .v-list-item--dense, .v-navigation-drawer__append .v-list-item {
     min-height: 35px;
 }
 .v-expansion-panel-content__wrap {
@@ -253,6 +253,7 @@ aside.v-navigation-drawer.v-navigation-drawer--absolute {
 /* Appended Bottom Menu */
 .v-navigation-drawer__append {
     background-color: #EFEFEF;
+    padding: 5%;
 }
 .drawer-app-img {
     max-width: 100%;
