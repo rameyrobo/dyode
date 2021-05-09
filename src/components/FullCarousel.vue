@@ -70,10 +70,11 @@ import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
   box-sizing: border-box;
   padding: 0 80px;
   background-color: transparent;
-  max-height: 46vw;  
+  min-height: 58.7vw;
   
   &.slide-1 {
-    background-image:url('../assets/images/compressed/Hero-Image-11.jpeg')
+    background-image:url('../assets/images/compressed/Hero-Image-11.jpeg');
+    background-position: right;
   }
   &.slide-2 {
     background-image:url('../assets/images/compressed/Hero-Image-12.jpeg')
@@ -100,6 +101,9 @@ import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
     visibility: visible;
     text-align:left;
     float: left;
+  }
+.slide-1 {
+    background-position: center;
   }
 .title {
   margin-bottom: 20px;
