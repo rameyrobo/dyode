@@ -50,26 +50,62 @@
       </v-list-item>
 
        <v-divider></v-divider>
-        <v-list-item-group
+       <v-expansion-panels
+      v-model="panel"
+      :disabled="disabled"
+      multiple
+    >
+      <v-expansion-panel>
+        <v-expansion-panel-header>Tops</v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <v-list-item-group
           v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
           <v-list-item>
-            <v-list-item-title>Foo</v-list-item-title>
+            <v-list-item-title><a class="top drawer link black" href="#">T-Shirts</a></v-list-item-title>
           </v-list-item>
 
           <v-list-item>
-            <v-list-item-title>Bar</v-list-item-title>
+            <v-list-item-title><a class="top drawer link black" href="#">Short Sleeve</a></v-list-item-title>
           </v-list-item>
 
           <v-list-item>
-            <v-list-item-title>Fizz</v-list-item-title>
+            <v-list-item-title><a class="top drawer link black" href="#">Long Sleeve</a></v-list-item-title>
           </v-list-item>
 
           <v-list-item>
-            <v-list-item-title>Buzz</v-list-item-title>
+            <v-list-item-title><a class="top drawer link black" href="#">Shorts</a></v-list-item-title>
           </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title><a class="top drawer link black" href="#">Pants</a></v-list-item-title>
+          </v-list-item>
+
         </v-list-item-group>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+
+      <v-expansion-panel>
+        <v-expansion-panel-header>Bottoms</v-expansion-panel-header>
+        <v-expansion-panel-content>
+           <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item>
+            <v-list-item-title><a class="top drawer link black" href="#">Shorts</a></v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title><a class="top drawer link black" href="#">Pants</a></v-list-item-title>
+          </v-list-item>
+
+          </v-list-item-group>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+
+    </v-expansion-panels>
         </v-list>
          <template v-slot:append>
         <div class="pa-2 grey-bg">
@@ -83,18 +119,18 @@
                         active-class="deep-purple--text text--accent-4"
                     >
                         <v-list-item>
-                            <v-list-item-title>Foo</v-list-item-title>
+                            <v-list-item-title><a class="bottom drawer link black" href="#">Shop All</a></v-list-item-title>
                         </v-list-item>
                         <v-list-item>
-                          <v-list-item-title>Bar</v-list-item-title>
-                        </v-list-item>
-
-                        <v-list-item>
-                          <v-list-item-title>Fizz</v-list-item-title>
+                          <v-list-item-title><a class="bottom drawer link black" href="#">New Arrivals</a></v-list-item-title>
                         </v-list-item>
 
                         <v-list-item>
-                          <v-list-item-title>Buzz</v-list-item-title>
+                          <v-list-item-title><a class="bottom drawer link black" href="#">Favorites</a></v-list-item-title>
+                        </v-list-item>
+
+                        <v-list-item>
+                          <v-list-item-title><a class="bottom drawer link black" href="#">Sale</a></v-list-item-title>
                         </v-list-item>
                     </v-list-item-group>
                   </v-col>
@@ -103,14 +139,16 @@
       </template>
     </v-navigation-drawer>
     </section>
-
-  </div>
+</div>
 </template>
 <script>
   export default {
     data: () => ({
       drawer: false,
       group: null,
+      panel: [0, 1],
+      disabled: false,
+      readonly: false,
     }),
 
     watch: {
@@ -178,10 +216,19 @@ img.left.logo {
 
 /* Nav Drawer styles */
 aside.v-navigation-drawer.v-navigation-drawer--absolute {
-    height: calc(100vh - 42px) !important;
-    top: 42px !important;
-    width: 75% !important;
-}
+  height: calc(100vh - 42px) !important;
+  top: 42px !important;
+  width: 75% !important;
+    .v-list-item__title {
+      text-align: left;
+        .drawer {
+          &.link {
+            text-decoration: none;
+            font-weight: 500;
+          }
+        }
+      } 
+    }
 .v-navigation-drawer__append {
     background-color: #EFEFEF;
 }
