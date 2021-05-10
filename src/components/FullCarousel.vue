@@ -56,8 +56,8 @@ import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 
 <style lang="scss" scoped>
 @import '../assets/styles/element-variables.scss';
-@import '/node_modules/swiper/swiper.scss';
-@import '/node_modules/swiper/components/pagination/pagination.scss';
+@import 'node_modules/swiper/swiper.scss';
+@import 'node_modules/swiper/components/pagination/pagination.scss';
 
 // Swiper Carousel Styles
 .swiper-slide {

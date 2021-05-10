@@ -65,7 +65,7 @@ export default {
 // End Carousel Script
 </script>
 <style lang="scss" scoped>
-@import '/node_modules/swiper/swiper.scss';
+@import 'node_modules/swiper/swiper.scss';
 @import '../assets/styles/element-variables.scss';
 .swiper-slide img {
     max-height: 220px;
