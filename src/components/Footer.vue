@@ -2,14 +2,14 @@
 <div class="footer black-bg mobile secondary container">
   <row class="footer-mobile-layout">
     <column>
-  <vsa-list init-active="true" :auto-collapse="false">
+  <vsa-list init-active="false" :auto-collapse="false" forceActive="false">
     <vsa-item>
       <vsa-heading>
         <h2>Customer Service</h2>
       </vsa-heading>
 <vsa-icon>
-      <span class="open white" style="font-size:1.2rem; margin-top: 20px">+</span>
-      <span class="close white" style="font-size:1.2rem; margin-top: 20px">-</span>
+      <span class="open white" style="font-size:1.2rem; margin-top: -2px">+</span>
+      <span class="close white" style="font-size:1.2rem; margin-top: -2px">-</span>
 </vsa-icon>
       <vsa-content>
         <ul class="menu-items">
@@ -146,6 +146,6 @@ ul.menu-items {
 @media (min-width: $layout-breakpoint-medium) {
 .footer.black-bg.mobile.secondary.container {
         display: none !important;
-}
+  }
 } 
 </style>
