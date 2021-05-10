@@ -22,7 +22,7 @@
             <span class='menu-item'>Sale!</span>
             </column>
             <column :xs="5" :sm="5" :md="4" class="nav-menu-list menu-icons white">
-            <img class="menu-icon search" src="../assets/images/compressed/search-ico.svg">
+            <img v-on:click="sub = !sub" class="menu-icon search" src="../assets/images/compressed/search-ico.svg">
             <img class="menu-icon account" src="../assets/images/compressed/account-ico.svg">
             <img class="menu-icon cart" src="../assets/images/compressed/cart-ico.svg">
             </column>
@@ -131,9 +131,18 @@
       </template>
     </v-navigation-drawer>
     </section>
+    <section v-if="sub" class="main-navbar-section secondary-navbar">
+        <row>
+            <column :xs="12" class="nav-menu-list logos">
+             <v-app-bar-nav-icon @click.stop="drawer = !drawer"><img class="left meat" src="../assets/images/compressed/meat.svg"></v-app-bar-nav-icon>
+            <img class="left logo" src="../assets/images/compressed/logo.svg">
+            </column>
+        </row>
+        </section>
 </div>
 </template>
 <script>
+ 
   export default {
     data: () => ({
       drawer: false,
@@ -141,13 +150,20 @@
       panel: [0, 1],
       disabled: false,
       readonly: false,
+      isActive: false,
     }),
+    methods: {
+      sub() {
+        alert("hello")
+      }
+            },
 
     watch: {
       group () {
-        this.drawer = false
-      },
-    },
+        this.isActive = !this.isActive;
+      }
+    }
+    
   }
 </script>
 <style lang="scss">
@@ -277,5 +293,13 @@ aside.v-navigation-drawer.v-navigation-drawer--absolute {
 .meat, button.v-app-bar__nav-icon {
     display: none;
     }
+}
+
+section.main-navbar-section.secondary-navbar {
+    margin: 0 25px;
+    z-index: 11;
+    position: absolute;
+    background-color: #fff;
+    width: calc(100% - 45px);
 }
 </style>
