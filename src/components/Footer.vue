@@ -110,6 +110,9 @@
     background-color: $color-white !important;
     color: $color-white !important;
 }
+.container.footer-mobile-layout {
+    padding: 12px 0;
+}
 h2 {
     font-family: "Pacifico", sans-serif !important;
     color: #fff !important;

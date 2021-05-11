@@ -49,6 +49,9 @@ input#newsletter {
     border: 1px solid #fff;
 }
 @media screen and (min-width: $layout-breakpoint-medium) {
+    .newsletter.main-color-bg.secondary.container {
+    margin-top: 25px !important;
+}
     .header-title.section-title.newsletter {
         @include font-size(2.75rem !important);
         padding: 3rem 0 0;

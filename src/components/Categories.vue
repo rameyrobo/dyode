@@ -80,6 +80,9 @@
     min-height:42px;
   }
 @media (min-width: $layout-breakpoint-medium) {
+section.categories {
+    margin-top: 10px;
+}
 .card {
   min-height:400px;
   &.card-3{

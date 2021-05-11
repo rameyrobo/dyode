@@ -10,7 +10,7 @@
         </row>
     </section>
      <section class="main-navbar-section main-color-bg" @mouseleave="mega = false">
-        <row>
+        <row class="secondary">
             <column :xs="5" :sm="5" :md="4" class="nav-menu-list logos">
              <v-app-bar-nav-icon @click.stop="drawer = !drawer"><img class="left meat" src="../assets/images/compressed/meat.svg"></v-app-bar-nav-icon>
             <img class="left logo" src="../assets/images/compressed/logo.svg">
@@ -23,8 +23,8 @@
             </column>
             <column :xs="5" :sm="5" :md="4" class="nav-menu-list menu-icons white">
             <v-slide-x-transition>
-              <div v-if="fullSearchPanel" class="full-width-search">
-                <input type="email" id="header" placeholder="What are you searching for?" name="search">
+              <div v-if="fullSearchPanel" @mouseleave="fullSearchPanel = false" class="full-width-search">
+                <input type="email" id="full-header" placeholder="What are you searching for?" name="search">
                 <input class="button black-bg go" type="submit" value="Go">
               </div>
             </v-slide-x-transition>
@@ -231,7 +231,7 @@
     </v-navigation-drawer>
     </section>
   <v-slide-y-transition>
-    <section v-if="searchPanel" class="main-navbar-section secondary-navbar">
+    <section v-if="searchPanel" @mouseleave="searchPanel = false" class="main-navbar-section secondary-navbar">
         <row class="search-bar">
             <column :xs="12" class="search-bar input-forms">
             <input type="email" id="header" placeholder="What are you searching for?" name="search">
@@ -287,6 +287,9 @@ export default {
 }
 
 /* Main Navbar Section */
+#nav section.main-navbar-section.main-color-bg {
+    padding-top: 10px;
+}
 .main-navbar-section {
     .container {
         max-height:64px;
@@ -413,12 +416,26 @@ aside.v-navigation-drawer.v-navigation-drawer--absolute {
     left: 50px;
     white-space: nowrap;
 }
+input#full-header {
+    border: #000 solid 1px;
+    width: 23vw;
+    height: 44px;
+    padding: 4px 20px;
+    position: relative;
+    background: #fff;
+    top: 0.2px;
+}
+input#full-header:focus-visible {
+    outline-color: $main-color;
+}
+/* Mobile Search Bar */
 input#header {
     border: #000 solid 2px;
     width: 83%;
-    height: 50px;
-    margin-top: -4px;
-    padding:4px 20px;
+    height: 43px;
+    padding: 4px 20px;
+    position: relative;
+    top: 0.2px;
 }
 
 input#header:focus-visible {
@@ -435,16 +452,19 @@ input#header:focus-visible {
 /* Nav Menu tablet view up */
 
 .nav-menu-list.menu-items {
-    padding: 0rem 4rem;
+    padding-top: 25px !important
     }
+.nav-menu-list.menu-icons {
+    padding-top: 12px;
 }
-
+  }
 section.main-navbar-section.secondary-navbar {
     margin: 0 25px;
     z-index: 2;
     position: absolute;
     background-color: #fff;
     width: calc(100% - 45px);
+
 }
 @media screen and (min-width:$layout-breakpoint-large) {
 /* Promo Bar Menu */
@@ -488,18 +508,6 @@ img.menu-icon.search.mobile {
 }
 .menu-item-link:hover {
   text-decoration: underline;
-}
-#nav .colVGR .menu-item {
-    
-}
-  section.main-navbar-section.main-color-bg input#header {
-    border: #000 solid 2px;
-    width: 19vw;
-    height: 44px;
-    margin-top: -4px;
-    padding: 4px 20px;
-    background: #fff;
-
 }
 
 /* Megamenu */

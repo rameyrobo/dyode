@@ -1,7 +1,7 @@
 <template>
 <div class="footer black-bg desktop secondary container">
  <row class="footer-desktop-layout">
-        <column :xs="12" :md="3">
+        <column :xs="12" :md="4">
         <h2>Customer Service</h2>
         <ul class="menu-items">
             <li class="menu-item white">Accessibility</li>
@@ -12,7 +12,7 @@
             <li class="menu-item white">Wishlist</li>
         </ul>
         </column>
-        <column :xs="12" :md="3">
+        <column :xs="12" :md="4">
         <h2>Company</h2>
         <ul class="menu-items">
             <li class="menu-item white">About Us</li>
@@ -21,11 +21,11 @@
             <li class="menu-item white">Affiliates</li>
         </ul>
         </column>
-        <column :xs="12" :md="3">
+        <column :xs="12" :md="1">
         </column>
         <column class="right" :xs="12" :md="3">
-        <h2>Follow Us</h2>
         <div class="social-media-icons">
+        <h2>Follow Us</h2>
         <a href="#"><img class="social-media-icons" src="../assets/images/compressed/fb.svg"></a>
         <a href="#"><img class="social-media-icons mid" src="../assets/images/compressed/ig.svg"></a>
         <a href="#"><img class="social-media-icons" src="../assets/images/compressed/twitter.svg"></a>
@@ -78,6 +78,13 @@ ul.menu-items {
 .mid {
   margin: 0 45px;
   }
+.right.colVGR {
+    justify-content: flex-end;
+    display: flex;
+        h2 {
+            margin-top: -0.8rem;
+    }
+}
 .social-media-icons {
   margin-top:15px;
 }

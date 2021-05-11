@@ -1,7 +1,7 @@
 <template>
 <div class="new-arrivals container">
 <section>
-    <row container :gutter="12">
+    <row :gutter="12">
      <column :xs="12">
      <h2 class="header-title section-title"><span class="shop-mob">Shop </span>New Arrivals</h2>
       <swiper class="swiper" :options="swiperOption">
@@ -72,10 +72,10 @@ export default {
 }
 .header-title.section-title {
   @include font-size(2.175rem);
-  padding: 0rem 0 1em;
+  padding: 1rem 0 1em;
 }
 .swiper-slide img {
-    max-height: 220px;
+    max-height: 180px;
     margin-bottom: 1rem;
 }
 .product-description {
@@ -123,16 +123,24 @@ export default {
 .swiper-button-prev:after, .swiper-button-next:after {
   @include font-size(1.25rem)
 }
-@media screen and ( min-width: 768px ) {
+@media screen and ( min-width: $layout-breakpoint-small) {
+  .swiper-slide img {
+    max-height: 220px;
+  }
+}
+@media screen and ( min-width: $layout-breakpoint-medium ) {
   .shop-mob {
     display: none;
   }
+  .new-arrivals .colVGR {
+    margin-bottom: 10px;
+}
   .header-title.section-title {
   @include font-size(3.75rem);
-  padding: 1rem 0 3rem;
+  padding: 2rem 0 3rem;
   }
   .swiper-slide img{
-    max-height: 421px;
+    max-height: 378px;
   }
 .product-title {
   @include font-size(1.375rem);
@@ -143,5 +151,11 @@ export default {
 .product-price {
   @include font-size(1.5rem);
 }
+}
+@media screen and (min-width: $layout-breakpoint-large) {
+  .swiper-slide img{
+    max-height: 421px;
+  }
+
 }
 </style>
