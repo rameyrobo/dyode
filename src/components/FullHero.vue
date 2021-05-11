@@ -37,6 +37,11 @@
   padding: 0 80px;
   overflow-x: hidden;
 }
+.subtitle.white {
+    padding: 40px 0 0;
+    margin-bottom: 20px;
+    font-size: 1.185rem;
+}
 @media screen and (min-width: $layout-breakpoint-medium) {
 .right-aligned-content {
   display: block;

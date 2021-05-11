@@ -1,5 +1,5 @@
    <template>
-   <div class="secondary container">
+   <div class="category-boxes secondary container">
     <section class="categories">
     <row :gutter="12">
         <column :xs="6" :lg="4">
@@ -35,6 +35,10 @@
 </template>
 <style lang="scss">
 @import '../assets/styles/element-variables.scss';
+
+.category-boxes.secondary.container {
+    padding: .5rem .6275rem 0;
+}
 .secondary {
   margin: 2rem auto 10px;
 }
@@ -55,7 +59,7 @@
   box-sizing: border-box;
   background-color: transparent;
   height:100%;
-  min-height: 203px;
+  min-height: 51vw;
   &.card-1 {
     background-image:url('../assets/images/compressed/Accessories-Image-1.jpeg')
   }
@@ -67,7 +71,7 @@
   }
 }
 .card-title {
-  @include font-size(3rem);
+  @include font-size(1.5rem);
 }
   .card-title {
     background:$main-color;
@@ -80,7 +84,25 @@
   min-height:400px;
   &.card-3{
     background-image:url('../assets/images/compressed/Accessories-Image-3-Full.jpeg');
+    background-position: center;
     }
   }
+}
+@media (min-width: $layout-breakpoint-large) {
+  .card {
+    min-height: 33vw;
+  }
+  .card-title {
+    padding: 1rem 0;
+  }
+  .card-3 {
+    background-position: top;
+  }
+  .card-title {
+    @include font-size(2.5rem);
+  }
+}
+@media (min-width: $layout-breakpoint-xtra-large) {
+
 }
 </style>

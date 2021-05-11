@@ -23,7 +23,7 @@
         </column>
         <column :xs="12" :md="3">
         </column>
-        <column :xs="12" :md="3">
+        <column class="right" :xs="12" :md="3">
         <h2>Follow Us</h2>
         <div class="social-media-icons">
         <a href="#"><img class="social-media-icons" src="../assets/images/compressed/fb.svg"></a>
@@ -48,6 +48,9 @@
 .footer {
     padding: 0 2rem 2rem !important;
 }
+.container.footer-desktop-layout {
+    padding-top: 2.7rem;
+}
 
 h2 {
     font-family: "Pacifico", sans-serif !important;
@@ -64,6 +67,7 @@ ul.menu-items {
     list-style: none;
     text-align: left;
     padding: .75rem 0;
+    display: block;
 }
 .social-media-icons {
     float:left;

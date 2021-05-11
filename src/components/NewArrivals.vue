@@ -3,7 +3,7 @@
 <section>
     <row container :gutter="12">
      <column :xs="12">
-     <h2 class="header-title section-title">New Arrivals</h2>
+     <h2 class="header-title section-title"><span class="shop-mob">Shop </span>New Arrivals</h2>
       <swiper class="swiper" :options="swiperOption">
     <swiper-slide><img src="../assets/images/compressed/Product-Carousel-Image.jpeg"><h5 class="product-title">Product Title</h5><h6 class="product-description">Women's T-Shirt</h6><p class="product-price"><span>19.99</span></p></swiper-slide>
     <swiper-slide><img src="../assets/images/compressed/Product-Carousel-Image.jpeg"><h5 class="product-title">Product Title</h5><h6 class="product-description">Women's T-Shirt</h6><p class="product-price"><span>19.99</span></p></swiper-slide>
@@ -67,13 +67,22 @@ export default {
 <style lang="scss" scoped>
 @import 'node_modules/swiper/swiper.scss';
 @import '../assets/styles/element-variables.scss';
+.new-arrivals.container {
+    padding-top: 0;
+}
+.header-title.section-title {
+  @include font-size(2.175rem);
+  padding: 0rem 0 1em;
+}
 .swiper-slide img {
     max-height: 220px;
+    margin-bottom: 1rem;
 }
-@media screen and ( min-width: 768px ) {
-  .swiper-slide img{
-    max-height: 421px;
-  }
+.product-description {
+    margin-bottom: 1.7rem;
+}
+.product-price {
+  margin-bottom: 1rem;
 }
 .swiper-button-prev, .swiper-button-next {
   color: $color-black;
@@ -114,7 +123,17 @@ export default {
 .swiper-button-prev:after, .swiper-button-next:after {
   @include font-size(1.25rem)
 }
-@media (min-width: 768px) {
+@media screen and ( min-width: 768px ) {
+  .shop-mob {
+    display: none;
+  }
+  .header-title.section-title {
+  @include font-size(3.75rem);
+  padding: 1rem 0 3rem;
+  }
+  .swiper-slide img{
+    max-height: 421px;
+  }
 .product-title {
   @include font-size(1.375rem);
 }

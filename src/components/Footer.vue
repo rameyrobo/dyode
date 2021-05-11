@@ -132,6 +132,7 @@ ul.menu-items {
     list-style: none;
     text-align: left;
     padding: .75rem 0;
+    display: block;
 }
 .social-link {
   text-align: left;

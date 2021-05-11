@@ -51,7 +51,7 @@ input#newsletter {
 @media screen and (min-width: $layout-breakpoint-medium) {
     .header-title.section-title.newsletter {
         @include font-size(2.75rem !important);
-        padding: 0 0 25px;
+        padding: 3rem 0 0;
     }
     img.subscribe-ico {
         width: 3.2rem;
@@ -78,12 +78,15 @@ input#newsletter {
         top: -2px;
         width: 66%;
         margin-right: 5px;
+        background: #fff;
+        padding: 0 20px;
         &::placeholder {
             color: #c6c6c6;
         }
     }
     .button {
         max-width: 33%;
+        max-height: 45px;
     }
 }
 </style>

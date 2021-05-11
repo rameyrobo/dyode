@@ -14,8 +14,12 @@
 </template>
 <style lang="scss" scoped>
 @import '../assets/styles/element-variables.scss';
+.secondary.container {
+    padding: 0 0 1rem;
+}
 .header-title.section-title.ig {
     @include font-size(2.235rem);
+    padding: 1.5rem 0 1rem;
 }
 .instagram, .instagram .container {
     overflow: hidden;
@@ -29,6 +33,7 @@
 @media screen and (min-width: $layout-breakpoint-medium) { 
     .header-title.section-title.ig{
         @include font-size(3.75rem);
+        padding: 2.5rem 0 1rem;
     }
 }
 @media screen and (min-width: $layout-breakpoint-large) {

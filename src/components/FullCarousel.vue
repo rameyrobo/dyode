@@ -113,6 +113,7 @@ import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
   line-height: 1rem;
   }
 .subtitle {
+  padding: 40px 0 0;
   margin-bottom: 20px;
   @include font-size(1.185rem);
   }

@@ -19,7 +19,7 @@
     display: block;
     position: relative;
     background: #EFEFEF;
-    padding: 2.5rem 0
+    padding: 1rem 0
 }
 .block-section-mobile {
     .header-title {
@@ -28,6 +28,9 @@
             margin: 0;
         }
     }
+}
+.subheader.secondary-text {
+    padding: 1rem 0;
 }
 h4.subheader {
     color: $main-color;
